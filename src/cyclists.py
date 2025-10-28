@@ -3,7 +3,8 @@
 import pandas as pd
 
 def cyclists():
-    pass
+    df = pd.read_csv("src/Helsingin_pyorailijamaarat.csv", sep=";")
+    return  df.dropna(how="all").dropna(axis=1, how="all")
 
 
 def main():
